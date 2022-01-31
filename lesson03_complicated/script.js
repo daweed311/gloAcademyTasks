@@ -1,13 +1,15 @@
 const lang = prompt("Выберите язык", "ru/en").toLocaleLowerCase().trim();
 
+const weekendDaysRu =
+  "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Восресенье";
+const weekendDaysEn =
+  "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday";
 // Через конструкцию if:
 
 // if (lang == "ru") {
-//   console.log(
-//     "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Восресенье"
-//   );
+//   console.log(weekendDaysRu);
 // } else if (lang == "en") {
-//   console.log("Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday");
+//   console.log(weekendDaysEn);
 // } else {
 //   alert("Выбирайте только между en и ru");
 // }
@@ -16,14 +18,10 @@ const lang = prompt("Выберите язык", "ru/en").toLocaleLowerCase().tr
 
 // switch (lang) {
 //   case "ru":
-//     console.log(
-//       "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Восресенье"
-//     );
+//     console.log(weekendDaysRu);
 //     break;
 //   case "en":
-//     console.log(
-//       "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"
-//     );
+//     console.log(weekendDaysEn);
 //     break;
 //   default:
 //     alert("Выбирайте только между en и ru");
@@ -32,26 +30,7 @@ const lang = prompt("Выберите язык", "ru/en").toLocaleLowerCase().tr
 
 // Через многомерный массив без ифов и switch.
 
-let arr = [
-  [
-    "Понедельник",
-    "Вторник",
-    "Среда",
-    "Четверг",
-    "Пятница",
-    "Суббота",
-    "Восресенье",
-  ],
-  [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ],
-];
+let arr = [[weekendDaysRu], [weekendDaysEn]];
 
 lang == "ru"
   ? console.log(arr[0].toString())
