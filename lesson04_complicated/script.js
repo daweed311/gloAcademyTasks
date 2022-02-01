@@ -10,6 +10,4 @@ const myFunc = function (value) {
   }
 };
 
-myFunc(
-  "asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd"
-);
+myFunc("try me");
