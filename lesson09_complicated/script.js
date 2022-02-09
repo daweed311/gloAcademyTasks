@@ -20,11 +20,11 @@ const firstFormat = function (actualDate) {
   let endHour, endMinute, endSecond;
 
   const ending = function (num, aEnding) {
-    const lastNum = +(num + '').slice(-1);
+    const lastNumber = +(num + '').slice(-1);
 
     return aEnding[
-      (lastNum === 1 && num !== 11) ? 0 :
-        (lastNum > 1 && lastNum < 5 && ![12, 13, 14].includes(num)) ? 1 : 2
+      (lastNumber === 1 && num !== 11) ? 0 :
+        (lastNumber > 1 && lastNumber < 5 && ![12, 13, 14].includes(num)) ? 1 : 2
     ];
   };
 
@@ -43,12 +43,12 @@ const firstFormat = function (actualDate) {
 };
 
 const secondFormat = (actualDate) => {
-  const leadingZero = (num) => ('0' + num + ' ').slice(-3, -1);
+  const zero = (num) => ('0' + num + ' ').slice(-3, -1);
 
   actualDate.month++;
   for (let key in actualDate) {
     if ('day,month,hours,minutes,second,'.includes(key + ',')) {
-      actualDate[key] = leadingZero(actualDate[key]);
+      actualDate[key] = zero(actualDate[key]);
     }
   }
 
